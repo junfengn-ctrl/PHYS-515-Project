@@ -7,13 +7,13 @@ This project studies binary loan default prediction using applicant income, loan
 The project is organized around three modeling questions:
 
 1. **Linear baseline and feature interpretation**  
-   Build a Logistic Regression classifier, evaluate its predictive performance, and interpret learned feature coefficients through log-odds and odds ratios.
+   Perform EDA and preprocessing, build a Logistic Regression classifier, evaluate its predictive performance, and interpret learned feature coefficients through log-odds and odds ratios.
 
 2. **Spatial proximity and non-linear classification**  
-   Evaluate k-Nearest Neighbors (kNN), tune the number of neighbors using the validation set, and study the effect of feature scaling on distance-based classification.
+   Evaluate k-Nearest Neighbors (kNN), explain its distance metric, tune the number of neighbors using the validation set, and study the effect of feature scaling on distance-based classification.
 
 3. **High-dimensional feature expansion and regularization**  
-   Apply second-order polynomial expansion to continuous features and compare L1/L2-regularized Logistic Regression models.
+   Apply second-order polynomial expansion to continuous features, compare L1/L2-regularized Logistic Regression models, and analyze how regularization affects feature weights.
 
 ## Repository Structure
 
@@ -34,7 +34,6 @@ The project is organized around three modeling questions:
 │   ├── coefficients/
 │   ├── figures/
 │   └── tables/
-└── y_test_processed.csv
 ```
 
 ## Data
@@ -110,6 +109,22 @@ The notebook trains and evaluates the following models:
 | k-Nearest Neighbors | Distance-based non-linear classification |
 | Polynomial + L2 Logistic Regression | Non-linear feature expansion with ridge regularization |
 | Polynomial + L1 Logistic Regression | Non-linear feature expansion with lasso regularization |
+
+## Notebook Organization
+
+`FinalProject.ipynb` is organized to match the report questions:
+
+| Section | Purpose |
+|---|---|
+| `1(a)` | EDA, preprocessing evidence, and processed train/validation/test splits |
+| `1(b)` | Logistic Regression baseline |
+| `1(c)` | Feature weights, log-odds, and odds-ratio interpretation |
+| `2(a)` | kNN distance-based classification and scaling sensitivity |
+| `2(b)` | Hyperparameter tuning for k |
+| `2(c)` | Best kNN model and comparison with Logistic Regression |
+| `3(a)` | Polynomial feature expansion |
+| `3(b)` | L1/L2 regularized Logistic Regression and regularization tuning |
+| `3(c)` | Coefficient effects, L1 sparsity, and best regularized polynomial model |
 
 ## Main Results
 
