@@ -1,0 +1,2 @@
+Original Feature Count,Polynomial Feature Count,Polynomial Features
+3,6,"employment_status_Unemployed, income, loan_amount, income^2, income loan_amount, loan_amount^2"

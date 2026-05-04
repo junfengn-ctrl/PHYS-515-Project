@@ -1,0 +1,3 @@
+feature,lower_bound,upper_bound,num_outliers
+income,-3826.75,21047.25,0
+loan_amount,-24316.625,74390.375,0
