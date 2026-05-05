@@ -138,10 +138,10 @@ Current test-set results:
 
 | Model | Test Accuracy | Test Precision | Test Recall | Test F1 |
 |---|---:|---:|---:|---:|
-| Best Polynomial Logistic (L2, C=0.03) | 0.793 | 0.756 | 0.849 | 0.800 |
+| Poly Logistic (L2, selected C=0.03) | 0.793 | 0.756 | 0.849 | 0.800 |
 | kNN (k=39) | 0.780 | 0.750 | 0.822 | 0.784 |
-| Polynomial + L2 Logistic Regression | 0.773 | 0.747 | 0.808 | 0.776 |
-| Polynomial + L1 Logistic Regression | 0.773 | 0.747 | 0.808 | 0.776 |
+| Poly Logistic (L2, fixed C=1) | 0.773 | 0.747 | 0.808 | 0.776 |
+| Poly Logistic (L1, fixed C=1) | 0.773 | 0.747 | 0.808 | 0.776 |
 | Logistic Regression | 0.760 | 0.740 | 0.781 | 0.760 |
 
 The strongest test-set performance is achieved by the polynomial Logistic Regression model with L2 regularization. However, the performance differences are moderate, so conclusions should be interpreted with the dataset size and validation/test split variability in mind.
@@ -152,10 +152,13 @@ The strongest test-set performance is achieved by the polynomial Logistic Regres
 
 ```text
 results/tables/model_comparison.csv
+results/tables/logistic_regression_performance.csv
 results/tables/knn_tuning_results.csv
 results/tables/knn_scaling_comparison.csv
 results/tables/regularization_tuning_results.csv
 results/tables/polynomial_feature_summary.csv
+results/tables/accuracy_wilson_ci.csv
+results/tables/raw_dataset_summary.csv
 ```
 
 ### Coefficients
@@ -171,6 +174,7 @@ results/coefficients/best_regularized_polynomial_coefficients.csv
 
 ```text
 results/figures/eda_feature_distributions.png
+results/figures/eda_income_loan_scatter.png
 results/figures/eda_default_relationships.png
 results/figures/eda_correlation_heatmap.png
 results/figures/knn_train_validation_f1_by_k.png
@@ -194,3 +198,4 @@ results/figures/model_comparison_test_f1.png
 - `FinalProject.ipynb` is the main experiment notebook.
 - The processed CSV files are versioned for convenient reruns and can be regenerated at any time by running `pipeline.py`.
 - The `results/` directory contains reproducible outputs used for analysis and reporting.
+- Report drafts and compiled PDFs are intentionally not versioned in this repository.
